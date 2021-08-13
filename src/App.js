@@ -16,7 +16,7 @@ import { ThemeProvider, createTheme, makeStyles } from '@material-ui/core/styles
 const theme = createTheme({
 	typography: {
 		fontFamily: ['"Patrick Hand"', 'cursive'].join(','),
-		fontSize: 25,
+		fontSize: 20,
 	},
 	palette: {
 		primary: purple,
@@ -38,11 +38,9 @@ function App() {
 	const [letter, setLetter] = useState('');
 	const handleChange = (e) => {
 		const value = e.target.value;
-		const bytes = AES.decrypt(secret, value);
-
 		let decrypted = '';
-
 		try {
+			const bytes = AES.decrypt(secret, value);
 			const decrypted_test = bytes.toString(enc_utf8);
 			decrypted = decrypted_test;
 		} catch (error) {}
@@ -54,22 +52,22 @@ function App() {
 			<CssBaseline />
 			<Container maxWidth="md" className={classes.root}>
 				<Paper elevation={15}>
-					<Typography variant="body1" gutterBottom align="center">
-						Please enter the password to see the letter. Wrong passwords won't show
-						anything.
-					</Typography>
-
 					<FormControl fullWidth variant="outlined">
 						<TextField
 							onChange={handleChange}
 							value={password}
-							label="Password"
+							label="Enter the password to see the letter"
 							type="password"
 							variant="outlined"
 						/>
 					</FormControl>
 
-					<Typography variant="body1" gutterBottom align="left">
+					<Typography
+						variant="body1"
+						gutterBottom
+						align="left"
+						style={{ whiteSpace: 'pre-wrap' }}
+					>
 						{letter}
 					</Typography>
 				</Paper>

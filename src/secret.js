@@ -1,2 +1,2 @@
-const secret = 'U2FsdGVkX1/8aXcEG+5zsXOHcMAb4kiyndDq50E8NAys0na8qkpRcLjz7Qb3b7gvh8b4xhzOM9N909Xz0/kPO8YfKKHw4844ZF59pzMWBPg=';
+const secret = `U2FsdGVkX18sbHV533XVz2D2nZ0VO7XARsluNrq+y7jla3TCxJWf740MTp9rrL9LRfeI/bpMdCGsYw396y2AZcSgP0/hGbBjiC613Sv7v4zY855U1lU1uLokgx6bmxwBwZ/JClgwzxGZitaQkPUx3A==`;
 export default secret;
