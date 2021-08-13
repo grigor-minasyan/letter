@@ -3,10 +3,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import blue from '@material-ui/core/colors/blue';
+import purple from '@material-ui/core/colors/purple';
 import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
 
 import secret from './secret.js';
 import AES from 'crypto-js/aes';
@@ -20,7 +19,7 @@ const theme = createTheme({
 		fontSize: 25,
 	},
 	palette: {
-		primary: blue,
+		primary: purple,
 	},
 });
 
@@ -61,12 +60,12 @@ function App() {
 					</Typography>
 
 					<FormControl fullWidth variant="outlined">
-						<InputLabel htmlFor="outlined-adornment-amount">Password</InputLabel>
-						<OutlinedInput
-							value={password}
+						<TextField
 							onChange={handleChange}
-							labelWidth={95}
+							value={password}
+							label="Password"
 							type="password"
+							variant="outlined"
 						/>
 					</FormControl>
 
