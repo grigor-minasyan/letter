@@ -16,7 +16,7 @@ import { ThemeProvider, createTheme, makeStyles } from '@material-ui/core/styles
 const theme = createTheme({
 	typography: {
 		fontFamily: ['"Patrick Hand"', 'cursive'].join(','),
-		fontSize: 20,
+		fontSize: 14,
 	},
 	palette: {
 		primary: purple,
