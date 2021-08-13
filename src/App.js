@@ -65,7 +65,7 @@ function App() {
 						<OutlinedInput
 							value={password}
 							onChange={handleChange}
-							labelWidth={60}
+							labelWidth={95}
 							type="password"
 						/>
 					</FormControl>
